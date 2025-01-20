@@ -20,13 +20,12 @@ for combo in allCombos:
         start = combo[::]
         chain = combo[::]
         
-        chain.append(fun(chain)%mod)
         while chain[-fib::] not in foundCombos:
             foundCombos.append(chain[-fib::])
             chain.append(fun(chain[-fib::])%mod)
 
         total+=1
-        braclets.append("{:<5}".format(str(total)+".") + "".join([str(x) for x in chain[:-1:]])+"->")
+        braclets.append("{:<5}".format(str(total)+".") + "→".join([str(x) for x in chain[:-1:]])+"→")
         
 
 print("total number of unique braclets =",total,end="\n\n")
