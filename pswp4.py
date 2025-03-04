@@ -1,8 +1,8 @@
 import time
 start1 = time.time()
 
-n=25
-p=0.5
+n=20
+p=0.75
 
 probs = [p,1-p]
 total = 0
@@ -28,7 +28,6 @@ print(f"l({n})= {total}\n")
 
 
 start2 = time.time()
-n=25
 sequence = [1,p]
 for i in range(2,n):
     term = p*sequence[i-1] + (1-p)*sequence[i-2]
